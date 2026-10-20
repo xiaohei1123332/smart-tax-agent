@@ -1,4 +1,4 @@
-/* 鲸税 · 界面层 */
+/* 智税通 · 界面层 */
 (function () {
   var D = window.DATA, E = window.Engine, C = D.COMPANY;
   var app = document.getElementById('app');
@@ -620,12 +620,12 @@
 
   function chatHTML() {
     if (!chat.length) {
-      return '<div class="msg"><div class="avatar">鲸</div><div class="bubble">我是鲸税。财税问题可以直接问，' +
+      return '<div class="msg"><div class="avatar">税</div><div class="bubble">我是智税通。财税问题可以直接问，' +
         '答案会标注依据出自哪条政策或图谱的哪条链路。<span class="src">知识库：' + POL.length + ' 项政策 · ' + D.KG_NODES.length + ' 节点图谱 · 本期计算数据</span></div></div>';
     }
     return chat.map(function (m) {
       return '<div class="msg ' + (m.role === 'me' ? 'me' : '') + '">' +
-        '<div class="avatar">' + (m.role === 'me' ? '我' : '鲸') + '</div>' +
+        '<div class="avatar">' + (m.role === 'me' ? '我' : '税') + '</div>' +
         '<div class="bubble">' + m.text + (m.src ? '<div class="src">依据：' + m.src + '</div>' : '') + '</div></div>';
     }).join('');
   }
